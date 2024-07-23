@@ -8,8 +8,8 @@ export const ArticleFoot = ( {image, title, text}) => {
             <img src={image} alt='img' className='rounded-[10px] border-b-[5px] border-VeryDarkBlue hover:border-SoftOrange w-[250px] lg:w-[650px] h-[100px] hover:cursor-pointer '/>
         </div>
         <div className='pl-6'>
-            <h2 className='text-[16px] sm:text-[20px] font-bold mb-4 hover:text-SoftOrange cursor-pointer'>{title}</h2>
-            <p className='text-VeryDarkBlue text-[12px] sm:text-[10px]'>{text}</p>
+            <h2 className='text-[20px] sm:text-[16px] font-bold mb-4 hover:text-SoftOrange cursor-pointer'>{title}</h2>
+            <p className='text-VeryDarkBlue md:text-[14px] font-semibold sm:text-[10px]'>{text}</p>
 
         </div>
     </article>
