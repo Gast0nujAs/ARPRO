@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser';
 import IconInfo from '../components/IconInfo'
 import { IconMail } from '../assets/icons/IconMail'
 import { IconPhone } from '../assets/icons/IconPhone'
@@ -12,23 +13,25 @@ export const Contacto = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const fromData = {
-      name,
-      email,
-      message
-    };
-    try {
-      const response = await axios.post('https://arugbypro.com/submit.php', fromData, { responseType: 'json' , 
-        headers: { 'Content-Type': 'application/json' }
-       });
+  const form = useRef();
 
-      console.log(response.data);
-    } catch (error) {
-      console.error(error);
-    }
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log(form)
+    const serviceID = "service_29q2waf";
+    const templateID = "template_w7oqqwg";
+    const apiKey = "qLxjg2xQeyodNgFRe";
+    emailjs.sendForm(serviceID, templateID, form.current, apiKey)
+      .then((result) => {
+        console.log(result.text);
+        alert("Enviado, Gracias por tu tiempo")
+      }, (error) => {
+        console.log(error.text);
+      });
   };
+
+
+  
 
 
   return (
@@ -47,14 +50,14 @@ export const Contacto = () => {
             <IconInfo icon={<IconMail />} text="info@arugbypro.com" />
             <IconInfo icon={<IconPhone />} text="11-67698456" />
           </div>
-          <form onSubmit={handleSubmit} className='grid grid-cols-1 gap-y-6 gap-x-4'>
+          <form onSubmit={sendEmail} ref={form} className='grid grid-cols-1 gap-y-6 gap-x-4'>
             <div className='grid grid-cols-1 gap-y-6 gap-x-4 '>
               <label>Name:</label>
               <input
                 className='h- 14 px-2 border-2'
                 type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                name='name'
+                
               />
             </div>
             <div className='grid grid-cols-1 gap-y-6 gap-x-4 '>
@@ -63,8 +66,7 @@ export const Contacto = () => {
                 
                 type="email"
                 className='h-14 px-2 border-2 rounded'
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                name='email'
               />
             </div>
             <div className='grid grid-cols-1 gap-y-6 gap-x-4 '>
@@ -72,8 +74,7 @@ export const Contacto = () => {
               <textarea
                 type="text"
                 className='h-32 px-2 border-2 rounded'
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                name='message'
               />
             </div>
             <button type="submit" className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 
