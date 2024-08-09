@@ -73,7 +73,7 @@ const Navbar = () => {
             <div>
                 {open && content}
             </div>
-            <button className="sm:hidden  top-6 right-10 justify-center items-center transition  " onClick={handleClick} >
+            <button className="sm:hidden  top-6 right-10 mx-6 justify-center items-center transition  " onClick={handleClick} >
                 {open ? <Hamburger color='black' toggled={open} toggle={setOpen} /> : <Hamburger color='black' toggled={open} toggle={setOpen} />}
             </button>
 
