@@ -12,11 +12,11 @@ export const MainArticle = () => {
   const navigate = useNavigate();
   
   return (
-    <section>
+    <section className="">
       <picture>
         <source srcSet={image1} media="(max-width: 640px)" />
         <source srcSet={image1} media="(min-width: 641px)" />
-        <img src={image1} alt="image article" className='w-[300px] h-[150px] sm:w-[640px] sm:h-[500px] lg:w-[3200px] lg:h-[600px]' />
+        <img src={image1} alt="image article" className='w-full h-[150px]  sm:w-[640px] sm:h-[500px] lg:w-[3200px] lg:h-[600px]' />
       </picture>
       <div className='sm:flex'>
         <div className='flex-1 py-5'>

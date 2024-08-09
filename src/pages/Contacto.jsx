@@ -7,6 +7,7 @@ import { Controller, useForm } from 'react-hook-form'
 import { FormElement } from '../components/FormElement'
 import axios from 'axios';
 import { useState } from 'react';
+import { Svgs } from '../components/Svgs';
 export const Contacto = () => {
 
   const [name, setName] = useState('');
@@ -46,9 +47,11 @@ export const Contacto = () => {
       </div>
       <div className='px-4 sm:w-2/3 lg:w-1/2 mx-auto'>
         <div className='rounded-lg shadow-lg bg-white -mt-24 py-10 md:py-12 px-4 md:px-6'>
-          <div className='grid text-[12px] sm:text-[18px] grid-cols-2 gap-x-6 mb-12 mx-auto'>
+          <div className='grid space-y-6 sm:space-y-0 text-[12px] sm:text-[18px]  sm:grid-cols-3 gap-x-6 mb-12 mx-auto'>
             <IconInfo icon={<IconMail />} text="info@arugbypro.com" />
+            <Svgs className=''/>
             <IconInfo icon={<IconPhone />} text="11-67698456" />
+            
           </div>
           <form onSubmit={sendEmail} ref={form} className='grid grid-cols-1 gap-y-6 gap-x-4'>
             <div className='grid grid-cols-1 gap-y-6 gap-x-4 '>
