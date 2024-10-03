@@ -6,7 +6,7 @@ export const InfoNegocios = () => {
     <div className='sm:flex sm:flex-row-reverse mt-10 gap-4 mb-10 pb-20'>
        
         <div className='w-full h-auto sm:w-1/2 mt-10'>
-          <img src={novedades1} alt="" className=''/>
+          <img src={novedades1} alt="" className='h-[100px] sm:h-auto'/>
           <p className='mt-10 text-center text-[18px]'>
             Para leer la nota completa haga click <a rel='noreferrer noopener' className='text-blue-500 hover:text-SoftOrange' target='_blank' href="https://hoydia.com.ar/deportes/profesionalizar-el-rugby-el-gran-desafio-de-arpro-en-cordoba-y-el-pais/">
              aquí
