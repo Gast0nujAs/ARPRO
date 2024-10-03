@@ -15,8 +15,17 @@ const Navbar = () => {
     const content =
         <>
             <ul className={`${open ? "flex" : "hidden"} 
-     flex-col text-center block absolute transition mt-10  text-center bg-gradient-to-b from-white %70 to-SoftOrange %20 text-2xl pt-20 space-y-6 left-0  w-full h-[40vh]  
+     flex-col text-center block absolute transition mt-10 mb-4  text-center bg-gradient-to-b from-white %70 to-SoftOrange %20 text-2xl pt-20 space-y-6 left-0  w-full h-[50vh]  
        sm:hidden`}>
+                <Link to='/novedades'>
+                    <li onClick={() => setOpen(!open)}
+                        className="
+                        hover:text-SoftOrange  hover:scale-125  hover:cursor-pointer hover:transition ">
+
+                        ¡Novedades!
+                    </li>
+
+                </Link>
                 <Link to='/'>
                     <li onClick={() => setOpen(!open)}
                         className="
@@ -56,6 +65,10 @@ const Navbar = () => {
         <>
             <ul className="hidden sm:flex sm:flex-row text-black text-2xl sm:justify-end  sm:text-4
                 sm:items-center space-x-16 sm:mx-24 sm:w-full" >
+                <li>
+                    <a onClick={() => navigate('/novedades')} className='flex text-SoftOrange hover:text-black hover:scale-125
+                     hover:border-b-2 hover:border-b-black hover:cursor-pointer hover:transition '>¡Novedades!</a>
+                </li>
                 <li>
                     <a onClick={() => navigate('/')} className='flex hover:text-SoftOrange hover:scale-125
                      hover:border-b-2 hover:border-b-SoftOrange hover:cursor-pointer hover:transition '>Home</a>

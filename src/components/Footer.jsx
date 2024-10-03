@@ -1,5 +1,6 @@
 import React from 'react'
 import { Svgs } from './Svgs'
+import { GastonCode } from './GastonCode'
 
 export const Footer = () => {
   return (
@@ -9,8 +10,10 @@ export const Footer = () => {
       </div>
       <div className='flex mt-4 sm:flex-row sm:justify-between'>
         <Svgs />
-        <p className='text-end text-[10px] sm:text-[18px] text-SoftOrange px-3'>Copyright © 2024 ARPRO, Todos los Derechos Reservados</p>
+        <p className='text-end text-[10px] sm:text-[16px]  px-3'>Copyright © 2024 ARPRO, Todos los Derechos Reservados</p>
+        
       </div>
+      <GastonCode />
 
     </footer>
   )
