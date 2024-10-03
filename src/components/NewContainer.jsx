@@ -5,7 +5,7 @@ export const NewContainer = () => {
         <aside className="bg-VeryDarkBlue text-white py-[28px] sm:px-[100px] sm:h-[800px]">
             <h2 className="text-SoftOrange text-[30px] text-center sm:text-4xl font-bold">ARPRO</h2>
             <NewArticle 
-                title="Mision"
+                title="Misión"
                 text="Nuestra misión en el Programa Club Alto Rendimiento es proporcionar una experiencia educativa integral,
                  priorizando el desarrollo físico, psicológico, emocional y social de niños, jóvenes y deportistas.
                 "
@@ -17,7 +17,7 @@ export const NewContainer = () => {
                 "
             />
             <NewArticle 
-                title="Vision"
+                title="Visión"
                 text="Ser líderes en el desarrollo deportivo profesional, fomentando una base y objetivo profesional en el rugby, 
                 priorizando el respeto y la responsabilidad en el trabajo en equipo, especialmente en los jóvenes deportistas."
             />

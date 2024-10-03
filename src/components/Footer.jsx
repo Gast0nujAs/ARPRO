@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer className='bg-VeryDarkBlue text-white py-10 mt-5  items-center'>
       <div className='text-center text-[15px] font-bold sm:text-[30px] '>
-        <h2 className='cursor-pointer'>Asociacion de Rugby Profesional (A.R.Pro.)</h2>
+        <h2 className='cursor-pointer'>Asociación de Rugby Profesional (A.R.Pro.)</h2>
       </div>
       <div className='flex mt-4 sm:flex-row sm:justify-between'>
         <Svgs />
